@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="img-list">
+    <view class="list">
+        <!-- 图片展示列表 -->
+        <view class="li" wx:for="{{imgList}}" wx:key="index">
+            <image class="file" src="{{item}}"></image>
+        </view>
+    </view>
+</view>
+<view class="radio_">
+<radio-group bindchange="radioChange">
+  <radio value="whole">
+    <label for="whole">整张图</label>
+  </radio>
+  <radio value="cutting" color="blue" checked="true">
+    <label for="cutting">裁剪图</label>
+  </radio>
+</radio-group>
+</view>
+<view class="btn" bindtap="browse">获取图片</view>
+<view class="btn" bindtap="conversionAddress">上 传</view>
